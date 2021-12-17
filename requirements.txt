@@ -75,7 +75,7 @@ sip==5.0.0
 Sphinx==4.2.0
 statsmodels==0.12.2
 tables==3.6.1
-TBB==0.2
+TBB==2018.0.4
 tensorboard==2.7.0
 tensorboard-data-server==0.6.1
 tensorboard-plugin-wit==1.8.0
