@@ -71,7 +71,7 @@ rsa==4.8
 scikit-image==0.18.3
 scikit-learn-intelex==2021.4.0
 simplegeneric==0.8.1
-sip==4.19.13
+sip==5.0.0
 Sphinx==4.2.0
 statsmodels==0.12.2
 tables==3.6.1
