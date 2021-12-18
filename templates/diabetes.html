@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Diabetes Prediction</h1>
+
+    <form action="/diabetes" method="post">
+        <input type="number" name= "feature1" placeholder="Pregnancies" >
+        <input type="number" name= "feature2" placeholder="Glucose">
+        <input type="number" name= "feature3" placeholder="Skin Thickness">
+        <input type="number" name= "feature4" placeholder="Insulin">
+        <input type="number" name= "feature5" placeholder="BMI" step="0.001">
+        <input type="number" name= "feature6" placeholder="Age3">
+        <input type="number" name= "feature7" placeholder="BP">
+        <input type="number" name= "feature8" placeholder="Pedegree" step="0.001">
+        
+        <input type="submit">
+    </form>
+
+    <p>Predicted Disease:</p>
+    {{pd}}
+
+
+</body>
+</html>

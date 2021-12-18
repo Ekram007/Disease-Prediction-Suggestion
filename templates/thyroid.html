@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Thyroid Prediction</h1>
+
+    <form action="/thyroid" method="post">
+        <input type="number" name= "feature1" placeholder="re0erral_source">
+        <input type="number" name= "feature2" placeholder="tSH">
+        <input type="number" name= "feature3" placeholder="t3">
+        <input type="number" name= "feature4" placeholder="tt4">
+        <input type="number" name= "feature5" placeholder="t4U">
+        <input type="number" name= "feature6" placeholder="age2">
+        <input type="number" name= "feature7" placeholder="query_hypo1hyroid">
+        <input type="number" name= "feature8" placeholder="sex">
+        <input type="number" name= "feature9" placeholder="0TF">
+        <input type="number" name= "feature10" placeholder="t3_measured">
+        <input type="number" name= "feature11" placeholder="tt4_measured">
+        <input type="number" name= "feature12" placeholder="0tI_measured">
+        <input type="number" name= "feature13" placeholder="tBG_measured">
+        <input type="number" name= "feature14" placeholder="on_thyroxine">
+        <input type="number" name= "feature15" placeholder="query_on_1hyroxine">
+        <input type="number" name= "feature16" placeholder="on_antithyroid_medication">
+        <input type="number" name= "feature17" placeholder="sick">
+        <input type="number" name= "feature18" placeholder="preg0t">
+        <input type="number" name= "feature19" placeholder="thyroid_surgery">
+        <input type="number" name= "feature20" placeholder="It3t_treatment">
+        <input type="number" name= "feature21" placeholder="query_hyper1hyroid">
+        <input type="number" name= "feature22" placeholder="lithium">
+        <input type="number" name= "feature23" placeholder="goitre">
+        <input type="number" name= "feature24" placeholder="tumor">
+        <input type="number" name= "feature25" placeholder="hypopituitary">
+        <input type="number" name= "feature26" placeholder="psych">
+        <input type="number" name= "feature27" placeholder="tSH_measured">
+
+        <input type="submit">
+    </form>
+
+    <p>Predicted Disease:</p>
+    {{pd}}
+
+</body>
+</html>

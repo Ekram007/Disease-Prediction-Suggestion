@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Dengue Prediction</h1>
+
+    <form action="/dengue" method="post">
+        <input type="number" name= "feature1" placeholder="White Blood Cells(K/mewL)">
+        <input type="number" name= "feature2" placeholder="Age3">
+        <input type="number" name= "feature3" placeholder="HCT(%)">
+        <input type="number" name= "feature4" placeholder="Platelets(K/mewL)">
+        <input type="number" name= "feature5" placeholder="Dengue NSI AG">
+        <input type="number" name= "feature6" placeholder="IgG">
+        <input type="number" name= "feature7" placeholder="IgM">
+
+        <input type="submit">
+    </form>
+
+    <p>Predicted Disease:</p>
+    {{pd}}
+</body>
+</html>
