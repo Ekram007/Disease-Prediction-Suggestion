@@ -37,6 +37,35 @@ def thyroid_prediction(input_data):
 
     return thyroid_mapping[result[0]]
 
+def dengue_doc_med(prev_history):
+
+    dengue_doctor = {"Cirrhosis": "Hepatologist", "Diabetes Mellitus": "Endocrinologist", "Thyroid":"Endocrinologist" ,"Glomeroulonephritis":"Nephrologist", "Carcinoma": "Oncologist", "Pregnancy": "Gynecologist",
+                 "Arrythmia":"Cardiologist", "Bone Pain":"Rheumatologist", "Measles":"Infectious Disease Specialist", "Pulmonary Disease":"Pulmonologist" }
+
+    dengue_medicine = {"Cirrhosis": "Paracetamol, Lactulose", "Diabetes Mellitus": "Paracetamol, Metformin", "Thyroid":"Paracetamol, Thyroxin " ,"Glomeroulonephritis":"Paracetamol, ACE Inhibitors", "Carcinoma": "Paracetamol, Chemotherapy", "Pregnancy": "Paracetamol",
+                 "Arrythmia":"Paracetamol, Encainide", "Bone Pain":"Paracetamol, Tylenol", "Measles":"Paracetamol, Vitamain-A, Measles virus vaccine", "Pulmonary Disease":"Paracetamol, Salmeterol Inhaler" }
+
+    return dengue_doctor[prev_history] , dengue_medicine[prev_history]
+
+def thyroid_doc_med(prev_history):
+
+    thyroid_doctor = {"Chicken Pox": "Dermatologist", "Common Cold": "General Medicine", "Periodontitis":"Dentist" ,"Dengue":"Critical Care Specialist", "Diabetic Retinopathy": "Opthalmologist", "Hay Fever": "Immunologist",
+                 "Schizophrenia":"Psychiatrist", "PCOS":"Gynecologist", "Erectile dysfunction":"Urologist", "Bell's Palsy":"ENT Specialist" }
+
+    thyroid_medicine = {"Chicken Pox": "Acyclovir", "Common Cold": "Fexofenadine", "Periodontitis":"Doxycycline" ,"Dengue":"Paracetamol", "Diabetic Retinopathy": "Ranibizumab", "Hay Fever": "Claritin",
+                 "Schizophrenia":"Procyclidine HCl", "PCOS":"Metformin", "Erectile dysfunction":"Sildenafil", "Bell's Palsy":"Prednisolone" }
+
+    return thyroid_doctor[prev_history], thyroid_medicine[prev_history]
+
+def diabetes_doc_med(prev_history):
+
+    diabetes_doctor = {"COPD": "Nephrologist", "Peripheral Vascular": "Cardiologist", "Dislipidemia":"Cardiologist" ,"Neuropathy":"Neurologist", "Psoriasis": "Dermatologist", "Acne": "Dermatologist",
+                 "Pulpitis":"Dentist", "Glaucoma":"Opthalmologist", "Thyroid":"Endocrinologist", "Coeliac":"Gastroenterologist" }
+
+    diabetes_medicine = {"COPD": "Roflumilast", "Peripheral Vascular": "Anti-clotting agents", "Dislipidemia":"Fibrates and Statins " ,"Neuropathy":"Amitriptyline", "Psoriasis": "Cerave Psoriasis Cream", "Acne": "Dapsone",
+                 "Pulpitis":"NSAID's, Acetominophen", "Glaucoma":"Bimatoprost drop", "Thyroid":"Thyroxin", "Coeliac":"Gluten Free Diet" }
+
+    return diabetes_doctor[prev_history], diabetes_medicine[prev_history]
 
 def disease_prediction(input_data):
 
