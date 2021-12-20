@@ -14,17 +14,21 @@ def home():
 def dengue():
     
     predictedDisease = 0
+    doctor = "None"
+    medicine = "None"
     if request.method == "POST":
         features = []
         for i in range(1,8):
             s = "feature"+ str(i)
             features.append(float(request.form[s]))
-        
-        
 
         predictedDisease = model.dengue_prediction(features)
+        if predictedDisease == "Dengue":
+            prevHistory = request.form["prev_history"]
+            doctor , medicine = model.dengue_doc_med(prevHistory)
+        
 
-    return render_template("dengue.html", pd = predictedDisease)
+    return render_template("dengue.html", pd = predictedDisease, d = doctor, m = medicine)
 
 
 @app.route("/thyroid", methods = ["GET","POST"])
@@ -32,6 +36,8 @@ def dengue():
 def thyroid():
 
     predictedDisease = 0
+    doctor = "None"
+    medicine = "None"
     if request.method == "POST":
         features = []
 
@@ -40,8 +46,11 @@ def thyroid():
             features.append(float(request.form[s]))
 
         predictedDisease = model.thyroid_prediction(features)
+        if predictedDisease == "Thyroid":
+            prevHistory = request.form["prev_history"]
+            doctor , medicine = model.thyroid_doc_med(prevHistory)
 
-    return render_template("thyroid.html", pd = predictedDisease)
+    return render_template("thyroid.html", pd = predictedDisease, d = doctor, m = medicine)
 
 
 @app.route("/diabetes", methods = ["GET","POST"])
@@ -49,7 +58,8 @@ def thyroid():
 def diabetes():
 
     predictedDisease = 0
-    print('ASDASDASDADASDASDSADSA')
+    doctor = "None"
+    medicine = "None"
     if request.method == "POST":
         features = []
 
@@ -58,8 +68,11 @@ def diabetes():
             features.append(float(request.form[s]))
 
         predictedDisease = model.diabetes_prediction(features)
+        if predictedDisease == "Diabetes":
+            prevHistory = request.form["prev_history"]
+            doctor , medicine = model.diabetes_doc_med(prevHistory)
 
-    return render_template("diabetes.html", pd = predictedDisease)
+    return render_template("diabetes.html", pd = predictedDisease, d = doctor, m = medicine)
 
 
 @app.route("/all", methods = ["GET","POST"])
