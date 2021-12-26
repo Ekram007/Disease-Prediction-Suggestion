@@ -25,7 +25,8 @@ def dengue():
         predictedDisease = model.dengue_prediction(features)
         if predictedDisease == "Dengue":
             prevHistory = request.form["prev_history"]
-            doctor , medicine = model.dengue_doc_med(prevHistory)
+            if prevHistory != "Others":
+                doctor , medicine = model.dengue_doc_med(prevHistory)
         
 
     return render_template("dengue.html", pd = predictedDisease, d = doctor, m = medicine)
@@ -48,7 +49,8 @@ def thyroid():
         predictedDisease = model.thyroid_prediction(features)
         if predictedDisease == "Thyroid":
             prevHistory = request.form["prev_history"]
-            doctor , medicine = model.thyroid_doc_med(prevHistory)
+            if prevHistory != "Others":
+                doctor , medicine = model.thyroid_doc_med(prevHistory)
 
     return render_template("thyroid.html", pd = predictedDisease, d = doctor, m = medicine)
 
@@ -70,7 +72,8 @@ def diabetes():
         predictedDisease = model.diabetes_prediction(features)
         if predictedDisease == "Diabetes":
             prevHistory = request.form["prev_history"]
-            doctor , medicine = model.diabetes_doc_med(prevHistory)
+            if prevHistory != "Others":
+                doctor , medicine = model.diabetes_doc_med(prevHistory)
 
     return render_template("diabetes.html", pd = predictedDisease, d = doctor, m = medicine)
 
