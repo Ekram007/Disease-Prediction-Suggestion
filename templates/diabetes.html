@@ -11,6 +11,26 @@
     <h1>Diabetes Prediction</h1>
 
     <form action="/diabetes" method="post">
+
+        <label for="location">Location: </label>
+        <select id="location" name="location">
+            <option value="Dhaka">Dhaka</option>
+            <option value="Chittagong">Chittagong</option>
+            <option value="Thyroid">Thyroid</option>
+            <option value="Sylhet">Sylhet</option>
+            <option value="Comilla">Comilla</option>
+            <option value="Rangpur">Rangpur</option>
+            <option value="Rajshahi">Rajshahi</option>
+            <option value="Barishal">Barishal</option>
+            <option value="Khulna">Khulna</option>            
+        </select>
+
+        <label for="gender">Gender: </label>
+        <select id="gender" name="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>    
+        </select>
+
         <input type="number" name= "feature1" placeholder="Pregnancies" >
         <input type="number" name= "feature2" placeholder="Glucose">
         <input type="number" name= "feature3" placeholder="Skin Thickness">
