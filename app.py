@@ -27,6 +27,8 @@ def dengue():
             prevHistory = request.form["prev_history"]
             if prevHistory != "Others":
                 doctor , medicine = model.dengue_doc_med(prevHistory)
+            else:
+                doctor , medicine = "Dr. Sakina Anwar, Medicine Specialist" , "Paracetamol, Drink water"
         
 
     return render_template("dengue.html", pd = predictedDisease, d = doctor, m = medicine)
@@ -51,6 +53,8 @@ def thyroid():
             prevHistory = request.form["prev_history"]
             if prevHistory != "Others":
                 doctor , medicine = model.thyroid_doc_med(prevHistory)
+            else:
+                doctor , medicine = "Dr. M.M. Haque, Medicine Specialist" , "Levothyroxine/ Carbimazole, regular exercise."
 
     return render_template("thyroid.html", pd = predictedDisease, d = doctor, m = medicine)
 
@@ -74,6 +78,8 @@ def diabetes():
             prevHistory = request.form["prev_history"]
             if prevHistory != "Others":
                 doctor , medicine = model.diabetes_doc_med(prevHistory)
+            else:
+                doctor , medicine = "Dr. Bilkis Fatema, Medicine Specialist" , "Metformin, Diet Control & Exercise. "
 
     return render_template("diabetes.html", pd = predictedDisease, d = doctor, m = medicine)
 
